@@ -1,7 +1,7 @@
 #include<mpi.h>
 #include<stdio.h>
 #include<stdlib.h>
-#include<math.h>
+#include<cmath>
 #include<iostream>
 using namespace std;
 
@@ -30,7 +30,7 @@ int dboard(int N) {
       double theta = randfrom(0.0, 360.0);
       double x = r * cos(theta * M_PI / 180.0);
       double y = r * sin(theta * M_PI / 180.0);
-      if ((abs(x) <= (2.0 / (sqrt(2)))) && (abs(y) <= (2.0 / sqrt(2)))) {
+      if ((fabs(x) <= (2.0 / (sqrt(2)))) && (fabs(y) <= (2.0 / sqrt(2)))) {
         darts_inside_square++;
       }
   }
